@@ -14,12 +14,4 @@ if st.button("Print", type="primary"):
     
     # This uses a proper Streamlit component which ensures the print
     # is triggered from a trusted user interaction context
-    components.html(
-        """
-        <script>
-            window.print();
-        </script>
-        """,
-        height=0,
-        key=f"print_{st.session_state.print_count}"
-    )
+    components.html("""<script>window.print();</script>""",height=0,key=f"print_{st.session_state.print_count}")
