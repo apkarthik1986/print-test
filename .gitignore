@@ -22,8 +22,10 @@ wheels/
 
 # Virtual environments
 venv/
+.venv/
 ENV/
 env/
+pyvenv.cfg
 
 # IDEs
 .vscode/
