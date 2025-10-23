@@ -9,8 +9,7 @@ st.write("Click the button below to print this page.")
 if st.button("Print", type="primary"):
     # Inject JavaScript to trigger print dialog
     # Use session state to create a unique key for each print action
-    if 'print_count' not in st.session_state:
-        st.session_state.print_count = 0
+    st.session_state.setdefault('print_count', 0)
     st.session_state.print_count += 1
     
     # This uses a proper Streamlit component which ensures the print
